@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.",
   "main": "index.js",
+  "dependencies": {
+    "base-64": "^1.0.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "jest --verbose --coverage",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,9 +20,5 @@
   "bugs": {
     "url": "https://github.com/AhmadAmaireh/data-structures-and-algorithms/issues"
   },
-  "homepage": "https://github.com/AhmadAmaireh/data-structures-and-algorithms#readme",
-  "dependencies": {
-    "base-64": "^1.0.0"
-  },
-  "devDependencies": {}
+  "homepage": "https://github.com/AhmadAmaireh/data-structures-and-algorithms#readme"
 }
