@@ -1,14 +1,12 @@
 'use strict';
 const Node = require('./node');
 
-class Linkedlist {
+class LinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
   }
-
-
 
   insert(value) {
     let newNode = new Node(value);
@@ -21,11 +19,11 @@ class Linkedlist {
       return this;
     }
   }
-
   includes(value) {
     let doesExist = false;
     let curr = this.head;
     while (curr) {
+      // console.log(value, curr.value);
       if (curr.value === value) {
         doesExist = true;
       }
@@ -33,28 +31,24 @@ class Linkedlist {
     }
     return doesExist;
   }
-
   toString() {
     let str = '';
     let curr = this.head;
     while (curr) {
       str += `{${curr.value}} --> `;
-      if (curr.next===null) {
+      if (curr.next === null) {
         str += 'NULL';
       }
       curr = curr.next;
     }
     return str;
-
   }
   append(newValue) {
-    const newNode = new Node(newValue);
-
+    let newNode = new Node(newValue);
     if (!this.head) {
       this.head = newNode;
       this.tail = newNode;
-    }
-    else {
+    } else {
       let curr = this.head;
       while (curr.next) {
         curr = curr.next;
@@ -119,7 +113,7 @@ class Linkedlist {
 
     let node1 = list1.head;
     let node2 = list2.head;
-    let outList = new Linkedlist();
+    let outList = new LinkedList();
 
     while (node1||node2) {
       if(node1) {
@@ -135,5 +129,4 @@ class Linkedlist {
   }
 }
 
-
-module.exports = Linkedlist;
+module.exports = LinkedList;

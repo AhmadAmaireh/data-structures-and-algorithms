@@ -94,7 +94,7 @@ describe('Linked List Test', () => {
     list.insertAfter('3', '0');
     expect(list.toString()).toBe('{1} --> {2} --> {3} --> {0} --> NULL');
   });
-  /////for testing kthFromEnd//
+  /////for testing kthFromEnd/////
   test('Test14:Where k is greater than the length of the linked list', () => {
     let list = new LinkedList();
     list.insert('3');
@@ -128,7 +128,7 @@ describe('Linked List Test', () => {
     list.insert('1');
     expect(list.kthFromEnd(1)).toBe('2');
   });
-  /////for testing zipLists/////////////////////////////////////////////////////////////////////////////////////
+  /////for testing zipLists////
   test('Test19:can zip two different lists with the same length', () => {
     let list1 = new LinkedList();
     let list2 = new LinkedList();
@@ -171,3 +171,4 @@ describe('Linked List Test', () => {
     expect(outlist.zipLists(list1,list2).toString()).toBe('');
   });
 });
+
