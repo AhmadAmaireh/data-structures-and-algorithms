@@ -1,5 +1,5 @@
 'use strict';
-const LinkedList = require('./lib/linkedlistInsertions');
+const LinkedList = require('./linked-list/lib/linkedlist');
 
 const ll = new LinkedList();
 
@@ -17,5 +17,3 @@ console.log(ll.toString());
 
 console.log(25,ll.includes(25));
 console.log(10,ll.includes(10));
-
-
