@@ -1,37 +1,9 @@
 'use strict';
-const BinaryTree = require('./binary-tree');
-const BinarySearchTree = require('./binary-tree');
+const {BinaryTree , BinaryTreeSearch} = require('./binary-tree');
 const Node = require('./node');
 
-// binary search tree
-let ten = new Node(10);
-let sixteen = new Node(16);
-let twenty = new Node(20);
-let thirty = new Node(13);
-let fivteen = new Node(15);
-let twelve = new Node(12);
-let seventeen = new Node(17);
-
-ten.left = sixteen;
-ten.right = fivteen;
-sixteen.left = twenty;
-sixteen.right = thirty;
-fivteen.left = twelve;
-fivteen.right = seventeen;
-
-let tree2 = null;
-
-tree2 = new BinarySearchTree(ten);
-
-let preOrderbst = tree2.preOrder();
-console.log('pre order for Binary search tree: ', preOrderbst);
-//pre order > 10 , 16 , 20 , 13 , 15 , 12 , 17
-
-
-
-
-// binary tree
-let tree = null;
+// BinaryTree
+let tree  = null;
 
 let one = new Node(1);
 let two = new Node(2);
@@ -55,14 +27,39 @@ three.right = five;
 tree = new BinaryTree(one);
 
 let preOrder = tree.preOrder();
-console.log('pre order for Binary tree: ', preOrder);
-// //pre order > 1 , 2 , 6 , 7 , 8 , 9 , 3 , 4 , 5
+console.log('pre order: ', preOrder);
+//pre order > 1 , 2 , 6 , 7 , 8 , 9 , 3 , 4 , 5
 
 let inOrder = tree.inOrder();
-console.log('in order for Binary tree: ', inOrder);
+console.log('in order: ', inOrder);
 //pre order > 6 , 8 , 7 , 9 , 2 , 1 , 4 , 3 , 5
 
 
 let postOrder = tree.postOrder();
-console.log('post order for Binary tree: ', postOrder);
+console.log('post order: ', postOrder);
 //pre order > 8 , 9 , 7 , 6 , 2 , 4 , 5 , 3 , 1
+
+
+// BinaryTreeSearch
+
+
+let bstTree = new BinaryTreeSearch();
+
+bstTree.add(50);
+bstTree.add(60);
+bstTree.add(70);
+bstTree.add(40);
+bstTree.add(20);
+bstTree.add(10);
+
+
+console.log('Contains ', bstTree.contains(10));
+console.log('Contains ', bstTree.contains(20));
+console.log('Contains ', bstTree.contains(30));
+console.log('Contains ', bstTree.contains(5));
+console.log('Contains ', bstTree.contains(40));
+console.log('Contains ', bstTree.contains(50));
+console.log('Contains ', bstTree.contains(60));
+console.log('Contains ', bstTree.contains(70));
+
+
