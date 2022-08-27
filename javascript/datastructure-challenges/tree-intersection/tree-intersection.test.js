@@ -52,7 +52,6 @@ describe('Tree Intersection Test', () => {
 
     tree1 = new BinaryTree(one);
     tree2 = new BinaryTree(onee);
-    // console.log(treeIntersection(tree1, tree2));
 
     expect(treeIntersection(tree1, tree2)).toEqual([1, 2, 3, 4]);
   });
@@ -101,8 +100,6 @@ describe('Tree Intersection Test', () => {
 
     tree1 = new BinaryTree(one);
     tree2 = new BinaryTree(onee);
-    // console.log(treeIntersection(tree1, tree2));
-
     expect(treeIntersection(tree1, tree2)).toEqual([ 'one', 'two', 'three','four']);
   });
 

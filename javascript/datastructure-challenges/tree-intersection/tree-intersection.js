@@ -1,5 +1,4 @@
 'use strict';
-// const binaryTree = require('./binary-tree');
 const HashMap = require('./hashTable');
 
 function treeIntersection(tree1, tree2) {
@@ -11,12 +10,9 @@ function treeIntersection(tree1, tree2) {
     let hash = new HashMap(100);
     let intersectionArr = [];
     preOrder1.forEach((value) => {
-      // console.log('VVVV111111', value);
-      // console.log('VVVV', typeof(value));
       hash.set(value,1);
     });
     preOrder2.forEach((value) => {
-      // console.log('VVVV2222', value);
       if (hash.contains(value)) {
         intersectionArr.push(value);
       }
